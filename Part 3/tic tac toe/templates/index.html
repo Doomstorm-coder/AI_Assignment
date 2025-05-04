@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Tic-Tac-Toe</h1>
+        
+        <div class="game-options">
+            <div class="option-group">
+                <label>Game Mode:</label>
+                <select id="game-mode">
+                    <option value="human_vs_human">Human vs Human</option>
+                    <option value="human_vs_ai" selected>Human vs AI</option>
+                    <option value="ai_vs_ai">AI vs AI</option>
+                </select>
+            </div>
+            
+            <div class="option-group">
+                <label>Difficulty:</label>
+                <select id="difficulty">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="impossible" selected>Impossible</option>
+                </select>
+            </div>
+            
+            <div class="option-group">
+                <label>Play:</label>
+                <select id="player-choice">
+                    <option value="X" selected>First</option>
+                    <option value="O">Second</option>
+                </select>
+            </div>
+            
+            <button id="apply-options">Apply Options</button>
+            <button id="ai-play">Watch AI vs AI</button>
+        </div>
+        
+        <div class="game-board">
+            <div class="row">
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+            </div>
+            <div class="row">
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+            </div>
+            <div class="row">
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+        </div>
+        
+        <div class="game-status">
+            <div id="status-message">Player X's turn</div>
+        </div>
+        
+        <div class="score-board">
+            <div class="score-item">
+                <span class="player-x">PLAYER (X)</span>
+                <span id="score-x">0</span>
+            </div>
+            <div class="score-item">
+                <span class="tie">TIE</span>
+                <span id="score-tie">0</span>
+            </div>
+            <div class="score-item">
+                <span class="player-o">PLAYER (O)</span>
+                <span id="score-o">0</span>
+            </div>
+        </div>
+        
+        <button id="reset-game">Reset Game</button>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

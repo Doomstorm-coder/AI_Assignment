@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #1abc9c;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+.game-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.option-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    min-width: 120px;
+}
+
+select, button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.game-board {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 5px;
+    margin: 20px 0;
+    background-color: white;
+    border: 5px solid #fff;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+
+.cell {
+    background-color: #1abc9c;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.cell.x::before {
+    content: "X";
+    color: #e74c3c;
+}
+
+.cell.o::before {
+    content: "O";
+    color: white;
+}
+
+.cell.winning {
+    background-color: #27ae60;
+}
+
+.game-status {
+    font-size: 1.5rem;
+    margin: 30px 0;
+}
+
+.score-board {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.score-item {
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    min-width: 100px;
+}
+
+.player-x {
+    color: white;
+}
+
+.player-o {
+    color: white;
+}
+
+#reset-game {
+    margin-top: 20px;
+    padding: 10px 20px;
+}

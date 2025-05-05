@@ -42,6 +42,13 @@ Key components:
 ~Parameters: γ = 0.9, α = 0.2, 5000 episodes
 ~Output: optimal value function and policy
 
+Contributors
+Jerome Nanuseb 223033030 
+Milu Simau 223035203 
+Kristofina Shipalanga 223076147 
+Orilio Naobeb 223077593 
+Simeon Makili  223085456
+
 
 NOTE: THE Final Notebook and PDF of the Notebook are also on the repository
 
